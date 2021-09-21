@@ -6,6 +6,7 @@ import { planetList } from "../common/planets";
 import { Color } from "three";
 import { Fragment } from "react";
 import {PlanetProperties} from './types'
+import Sun from "./components/Sun";
 const CanvasConfig = () => {
     const {gl,scene} = useThree(state=>state);
     scene.background = new Color("black");
@@ -17,10 +18,11 @@ const SolarSystem = () => {
     return <Canvas camera={{position:[0,60,60]}}>
         <CanvasConfig/>
         <OrbitControls/>
+        <Sun/>
         {planetList.map((planet:PlanetProperties)=>{
-            const {name,radius,distanceFromSun,map,bumpMap} = planet;
+            const {name,radius,distanceFromSun,map,bumpMap,revolution} = planet;
             return <Fragment key={name}>
-                <Planet radius={radius} distanceFromSun={distanceFromSun} map={map} bumpMap={bumpMap}/>
+                <Planet radius={radius} distanceFromSun={distanceFromSun} map={map} bumpMap={bumpMap} revolution={revolution}/>
                 <Orbit radius={distanceFromSun}/>
                 </Fragment>
         })}
