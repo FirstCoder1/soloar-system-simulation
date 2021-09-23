@@ -17,6 +17,7 @@ const Planet:FC<Props> = ({radius,distanceFromSun,map,revolution}) => {
             const {current:mesh} = meshRef;
             mesh.position.z = Math.cos(angle)*distanceFromSun
             mesh.position.x = Math.sin(angle)*distanceFromSun
+            mesh.rotateY(0.1)
         }
     })
     return <mesh position={[0,0,distanceFromSun]} ref={meshRef}>
