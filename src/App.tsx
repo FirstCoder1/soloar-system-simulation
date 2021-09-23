@@ -1,14 +1,14 @@
-import { Suspense } from 'react';
-import SolarSystem from './SolarSystem';
-
-function App() {
+import { Suspense } from "react";
+import SolarSystem from "./SolarSystem";
+import loading_icon from "./assets/loading_icon.jpg";
+const App = () => {
   return (
     <div className="App">
-      <Suspense fallback={null}>
-      <SolarSystem/>
+      <Suspense fallback={<img src={loading_icon} alt="loading" />}>
+        <SolarSystem />
       </Suspense>
     </div>
   );
-}
+};
 
 export default App;
