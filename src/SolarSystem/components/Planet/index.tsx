@@ -11,7 +11,7 @@ const Planet:FC<Props> = ({radius,distanceFromSun,map,revolution}) => {
     let angle = 0; //angle in radians
     const increase = 6.28319/revolution
     useFrame(()=>{
-        angle +=increase/10;
+        angle +=increase/100;
         if(angle >= 6.28319) angle = 0;
         if(meshRef.current){
             const {current:mesh} = meshRef;
