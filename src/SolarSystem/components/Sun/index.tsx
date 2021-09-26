@@ -7,7 +7,7 @@ const Sun: FC<{}> = () => {
   return (
     <mesh>
       <sphereGeometry args={[radius, radius * 10, radius * 10]} />
-      <meshBasicMaterial map={mapTexture} />
+      <meshStandardMaterial map={mapTexture} normalMap={normalMapTexture}/>
     </mesh>
   );
 };

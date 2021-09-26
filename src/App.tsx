@@ -5,7 +5,6 @@ const App = () => {
   return (
     <div className="App">
       <Suspense fallback={<img src={loading_icon} alt="loading" />}>
-        <pointLight />
         <SolarSystem />
       </Suspense>
     </div>
