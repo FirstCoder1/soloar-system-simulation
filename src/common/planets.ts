@@ -6,8 +6,18 @@ import earthMap from "../assets/maps/map/earth.jpg";
 import earthNormalMap from "../assets/maps/normal/earth.png";
 import marsMap from '../assets/maps/map/mars.jpg'
 import marsNormalMap from '../assets/maps/normal/mars.png'
+import jupiterMap from '../assets/maps/map/jupiter.jpg'
+import jupiterNormalMap from '../assets/maps/normal/jupiter.png'
+import saturnMap from '../assets/maps/map/saturn.jpg'
+import saturnNormalMap from '../assets/maps/normal/saturn.png'
+import uranusMap from '../assets/maps/map/uranus.jpg'
+import uranusNormalMap from '../assets/maps/normal/uranus.png'
+import neptuneMap from '../assets/maps/map/neptune.jpg'
+import neptuneNormalMap from '../assets/maps/normal/neptune.png'
 import { PlanetProperties } from "./types";
 
+//revolution and rotation data from https://www.exploratorium.edu/ronh/age/
+//planet sizes based on https://solarsystem.nasa.gov/resources/686/solar-system-sizes/
 export const planetList: Array<PlanetProperties> = [
   {
     name: "Mercury",
@@ -44,5 +54,41 @@ export const planetList: Array<PlanetProperties> = [
     rotation: 1.03,
     map: marsMap,
     normalMap: marsNormalMap,
+  },
+  {
+    name: "Jupiter",
+    radius: 69.911,
+    distanceFromSun: 235,
+    revolution: 11.86,
+    rotation: 0.41,
+    map: jupiterMap,
+    normalMap: jupiterNormalMap,
+  },
+  {
+    name: "Saturn",
+    radius: 58.232,
+    distanceFromSun: 371,
+    revolution: 0.45,
+    rotation: 29.46,
+    map: saturnMap,
+    normalMap: saturnNormalMap,
+  },
+  {
+    name: "Uranus",
+    radius: 25.362,
+    distanceFromSun: 462,
+    revolution: 0.72,
+    rotation: 84.01,
+    map: uranusMap,
+    normalMap: uranusNormalMap,
+  },
+  {
+    name: "Neptune",
+    radius: 24.622,
+    distanceFromSun: 519,
+    revolution: 0.67,
+    rotation: 164.79,
+    map: neptuneMap,
+    normalMap: neptuneNormalMap,
   },
 ];
