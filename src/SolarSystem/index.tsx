@@ -20,10 +20,10 @@ const SolarSystem = () => {
       <CanvasConfig />
       <OrbitControls />
       <Sun />
-      {planetList.map((planet: PlanetProperties) => {
-        const { name, ...properties } = planet;
+      {planetList.map((planet: PlanetProperties,index:number) => {
+        const { ...properties } = planet;
         return (
-          <Fragment key={name}>
+          <Fragment key={index}>
             <Planet {...properties} />
             <Orbit radius={properties.distanceFromSun} />
           </Fragment>
