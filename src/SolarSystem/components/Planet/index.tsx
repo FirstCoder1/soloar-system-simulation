@@ -24,7 +24,7 @@ const Planet: FC<Props> = ({ radius, distanceFromSun, map, normalMap,revolution,
   return (
     <mesh position={[0, 0, distanceFromSun]} ref={meshRef}>
       <sphereGeometry args={[radius]} />
-      <meshBasicMaterial map={mapTexture}/>
+      <meshStandardMaterial map={mapTexture} normalMap={normalMapTexture}/>
     </mesh>
   );
 };
