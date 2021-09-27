@@ -19,7 +19,7 @@ const SolarSystem = () => {
     <Canvas camera={{ position: [0, 60, 60] }}>
       <CanvasConfig />
       <OrbitControls />
-      <ambientLight />
+      <pointLight />
       <Sun />
       {planetList.map((planet: PlanetProperties, index: number) => {
         const { ...properties } = planet;

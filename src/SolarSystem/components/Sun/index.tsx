@@ -2,12 +2,12 @@ import { useTexture } from "@react-three/drei";
 import { FC } from "react";
 import { SunProps } from "../../../common/sun";
 const Sun: FC<{}> = () => {
-  const { radius, map, normalMap } = SunProps;
-  const [mapTexture, normalMapTexture] = useTexture([map, normalMap]);
+  const { radius, map } = SunProps;
+  const mapTexture = useTexture(map);
   return (
     <mesh>
       <sphereGeometry args={[radius, radius * 10, radius * 10]} />
-      <meshStandardMaterial map={mapTexture} normalMap={normalMapTexture}/>
+      <meshBasicMaterial map={mapTexture}/>
     </mesh>
   );
 };
