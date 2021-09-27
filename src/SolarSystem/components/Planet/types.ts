@@ -4,5 +4,4 @@ export interface Props{
     revolution:number;
     rotation:number;
     map:string;
-    normalMap:string;
 }

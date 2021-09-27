@@ -5,5 +5,4 @@ export interface PlanetProperties{
     rotation:number;
     revolution:number;
     map:string;
-    normalMap:string
 }

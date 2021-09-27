@@ -1,9 +1,8 @@
-export interface PlanetProperties{
-    name:string;
-    radius:number;
-    distanceFromSun:number;
-    revolution: number;
-    rotation: number;
-    map:string;
-    normalMap:string
+export interface PlanetProperties {
+  name: string;
+  radius: number;
+  distanceFromSun: number;
+  revolution: number;
+  rotation: number;
+  map: string;
 }
