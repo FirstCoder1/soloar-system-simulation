@@ -16,7 +16,7 @@ const CanvasConfig = () => {
 
 const SolarSystem = () => {
   return (
-    <Canvas camera={{ position: [0, 40, 20] }}>
+    <Canvas camera={{ position: [5, 5, 0] }}>
       <CanvasConfig />
       <OrbitControls />
       <pointLight />

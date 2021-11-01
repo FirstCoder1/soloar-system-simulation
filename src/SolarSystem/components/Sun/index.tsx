@@ -6,7 +6,7 @@ const Sun: FC<{}> = () => {
   const mapTexture = useTexture(map);
   return (
     <mesh>
-      <sphereGeometry args={[radius, radius * 10, radius * 10]} />
+      <sphereGeometry args={[radius, radius * 50, radius * 50]} />
       <meshBasicMaterial map={mapTexture}/>
     </mesh>
   );
