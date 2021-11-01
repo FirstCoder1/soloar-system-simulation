@@ -21,7 +21,15 @@ const SolarSystem = () => {
       <OrbitControls />
       <pointLight />
       <Sun />
-
+      {planetList.map((planet: PlanetProperties, index: number) => {
+        const { ...properties } = planet;
+        return (
+          <Fragment key={index}>
+            <Planet {...properties} />
+            <Orbit radius={properties.distanceFromSun} />
+          </Fragment>
+        );
+      })}
     </Canvas>
   );
 };
